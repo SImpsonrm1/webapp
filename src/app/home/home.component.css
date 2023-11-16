@@ -1,0 +1,76 @@
+.container {
+  background: url('img1.webp') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  color: #fff;
+  padding: 20px;
+  border-radius: 0px;
+  text-align: center;
+}
+
+.loading {
+  background-color: #b91d85;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  animation: loadingAnimation 1.5s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+button {
+  background-color: #b91d85;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+/* Additional styles */
+
+input[type='number'], input[type='text'] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+  .content {
+    width: 90%;
+    padding: 10px;
+  }
+  button, input[type='number'], input[type='text'] {
+    width: calc(100% - 20px);
+  }
+}

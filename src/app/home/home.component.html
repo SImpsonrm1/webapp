@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="content">
+    <h1>Poly Phonic</h1>
+    <p>Enter details below to generate music and its visual representation.</p>
+
+    <!-- Inputs for music generation -->
+    <input type="number" placeholder="Duration in seconds" [(ngModel)]="duration">
+    <input type="text" placeholder="Description of music" [(ngModel)]="description">
+<button (click)="runModel()" *ngIf="!isLoading">Run Model</button>
+<div class="loading" *ngIf="isLoading">Loading...</div>
+    <!-- Display results -->
+    <div *ngIf="musicUrl && imageUrl">
+      <h2>Generated Music</h2>
+      <audio controls>
+        <source [src]="musicUrl" type="audio/wav">
+      </audio>
+
+      <h2>Generated Graph</h2>
+      <img [src]="imageUrl" alt="Generated Graph">
+    </div>
+  </div>
+</div>
