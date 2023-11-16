@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
       response => {
         this.musicUrl = `http://localhost:5000/generated/${response.file}.wav`;
         this.imageUrl = `http://localhost:5000/generated/${response.file}.png`;
+        this.isNotLoading();
       },
 
       error => {
@@ -32,6 +33,8 @@ export class HomeComponent implements OnInit {
       }
 
     );
-
   }
+  isNotLoading(): boolean {
+    return this.isLoading = false;
+}
 }
