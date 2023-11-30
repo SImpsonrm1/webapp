@@ -15,8 +15,8 @@ export class BioComponent implements OnInit {
     },
     {
       name: 'Alex Somer',
-      photo: 'path/to/photo2.jpg',
-      description: 'This is member 2.'
+      photo: 'assets/headshot2.jpg',
+      description: ' I\'m an undergrad student studying computer science with a concentration in data science and machine learning.'
     },
 
   ];
